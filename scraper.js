@@ -56,8 +56,8 @@ function main() {
 async function loginTiendanube(email, password, orderId, res) {
   let browser;
   try {
-    browser = await puppeteer.launch({
-      browserURL:"https://browserless.estorecompany.com.ar/?token=JwUYSrzcUgb2m8ptr71KJ03ikUUmYICf",
+    browser = await puppeteer.connect({
+      browserWSEndpoint:"https://browserless.estorecompany.com.ar/?token=JwUYSrzcUgb2m8ptr71KJ03ikUUmYICf",
       headless: false,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
